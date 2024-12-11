@@ -1,15 +1,5 @@
-Creating a Handwritten Equation Solver using Convolutional Neural Networks (CNNs) is an exciting project that involves combining computer vision and mathematical logic. Here's an overview of how this project could 
-be structured:
+Creating a handwritten equation solver using CNN (Convolutional Neural Network) involves building a system that recognizes handwritten mathematical equations and evaluates their solutions. This application is structured into two main phases: training the model and developing an interactive app for users. To achieve this, we use Python for implementation, Jupyter Notebook for data training, and Streamlit integrated with PyCharm for creating a user-friendly interface.
 
-Overview
-The project involves developing a machine learning model to recognize handwritten mathematical symbols and numbers, solve the equation, and display the results using an interactive interface like Streamlit. The 
-core task is split into three components: data preprocessing, model training, and deployment. The CNN is trained on a dataset of handwritten mathematical symbols, such as digits (0–9) and operators (+, -, *, /, =). 
-Common datasets like the MNIST dataset for digits and custom datasets for operators can be used. The preprocessing step includes resizing the images, normalizing the pixel values, and one-hot encoding the labels.
+In the training phase, Jupyter Notebook is employed for its versatility in handling data preprocessing, model building, and evaluation. Handwritten samples of mathematical symbols and numbers are used as the dataset, which is processed into training and testing sets. A CNN is then constructed to classify these symbols accurately, leveraging its ability to capture spatial hierarchies in images. TensorFlow or PyTorch libraries can be used to implement the CNN, with layers optimized to handle variations in handwriting. Once the CNN is trained, it can predict symbols from a handwritten equation image. A parsing algorithm is then implemented to assemble these symbols into an interpretable equation, which is evaluated programmatically to obtain the solution.
 
-The CNN is designed to classify each character accurately. Once trained, the model can recognize symbols from images captured through a drawing pad or uploaded files. The recognized symbols are then parsed into a 
-mathematical equation, which can be solved programmatically using Python libraries like sympy.
-
-Deployment
-The solution is deployed using Streamlit to provide a user-friendly interface. Users can draw equations on a canvas, and the app processes the input, identifies the characters using the trained CNN, and solves the 
-equation in real time. PyCharm is used as the development environment to write and debug the Python code. This project demonstrates the integration of machine learning, image processing, and web app deployment, 
-making it an excellent example of practical AI applications.
+For the app development phase, Streamlit is chosen for its simplicity in creating interactive web applications. Using PyCharm, the app is designed to allow users to upload an image of a handwritten equation. The backend pipeline processes the image by running it through the trained CNN to recognize the symbols, reconstructs the equation, and computes the result. The app provides an intuitive interface, displaying both the parsed equation and its solution in real-time. This streamlined setup makes the system accessible to students and educators alike, bridging the gap between traditional handwritten work and modern computational tools.
